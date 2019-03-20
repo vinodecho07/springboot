@@ -1,5 +1,7 @@
 package com.product.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,7 +18,7 @@ import lombok.ToString;
 @Entity
 @Table
 @Setter @Getter @NoArgsConstructor @ToString
-public class ProductDetail {
+public class ProductDetail implements Serializable{
 	
 	/**
 	 *
