@@ -63,6 +63,18 @@
 		    <version>2.9.2</version>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+	    <repository>
+	      <id>nexus</id>
+	      <name>ING_Suite</name>
+	      <url>http://13.233.244.181:8081/repository/ING-SUITE/</url>
+	    </repository>
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>ISmart-Snap</name>
+	      <url>http://13.233.244.181:8081/repository/ING-SUITE-SNAPSHOT/</url>
+	    </snapshotRepository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
