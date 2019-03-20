@@ -40,7 +40,7 @@ public class ProductGroup implements Serializable {
 	String productGroupDescription;
 	
 	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
-    @JoinColumn(name="productId")
+    @JoinColumn(name="product_group_id")
     List<Product> product;
 
 	public ProductGroup(long productGroupId, String productGroupName, String productGroupDescription) {
