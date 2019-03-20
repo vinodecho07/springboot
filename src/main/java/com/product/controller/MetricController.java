@@ -31,7 +31,7 @@ public class MetricController {
 	
 	@PostMapping("/updateCount/{id}")
 	public ResponseEntity<Metric> register(@PathVariable long id){
-		
+		logger.info("id : " + id);
 		return new ResponseEntity<Metric>(metricService.updateCount(id), HttpStatus.OK);
 	}
 	

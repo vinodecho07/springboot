@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import com.product.model.ProductGroup;
 import com.product.service.ProductGroupService;
@@ -24,10 +25,17 @@ public class ProductGroupRestController {
 	@Autowired
 	ProductGroupService productGroupService;
 	
+	@Autowired
+	RestTemplate restTemplate ;
+	
+	private String uri = "http://localhost:8083/INGSuite/api/metric/updateCount/1";
+	
 	@GetMapping("/getProductGroups")
 	public ResponseEntity<List<ProductGroup>> getProductGroups() {
 		logger.info("getProductGroups===");
-		List<ProductGroup> productGroups = productGroupService.getProductGroups();;
+		List<ProductGroup> productGroups = productGroupService.getProductGroups();
+		
+		restTemplate.postForEntity(uri, null, Object.class);
 		return new ResponseEntity<>(productGroups, HttpStatus.OK);
 	}
 	
