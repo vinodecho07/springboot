@@ -1,5 +1,7 @@
 package com.product.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,4 +26,11 @@ public class MetricServiceImpl implements MetricService {
 		}
 		return metricRepository.save(metric);
 	}
+
+	@Override
+	public List<Metric> getMetrics() {
+		return metricRepository.findAll();
+	}
+
+	
 }
