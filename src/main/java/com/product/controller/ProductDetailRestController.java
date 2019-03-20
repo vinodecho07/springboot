@@ -1,6 +1,8 @@
 package com.product.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,9 +21,9 @@ public class ProductDetailRestController {
 	ProductDetailService productDetailService;
 
 	@GetMapping("/getProductDetail/{productId}")
-	public ProductDetail getProductDetail(@PathVariable Long productId) {
+	public ResponseEntity<ProductDetail> getProductDetail(@PathVariable Long productId) {
 		ProductDetail ProductDetail = productDetailService.getProductDetails(productId);
-		return ProductDetail;
+		return new ResponseEntity<>(ProductDetail, HttpStatus.OK);
 	}
 
 
