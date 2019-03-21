@@ -22,3 +22,10 @@ INSERT INTO ingsuite.product (product_id, product_description, product_name, pro
 
 INSERT INTO ingsuite.product_detail (product_detail_id, duration, maximum_investment, minimum_investment, precentage_of_interest, rate_of_interest, special, withdrawal, product_product_id) VALUES ('2', 'unlimited', '99999999', '0', '0.20', 'variable', 'Savings Lion as present', 'always possible', '2');
 
+INSERT INTO `ingsuite`.`metric`(`id`,`count`,`group_id`,`group_name`) VALUES(1,0,1,"Overview");
+INSERT INTO `ingsuite`.`metric`(`id`,`count`,`group_id`,`group_name`) VALUES(2,0,2,"Mortgage");
+INSERT INTO `ingsuite`.`metric`(`id`,`count`,`group_id`,`group_name`) VALUES(3,0,3,"Payments");
+INSERT INTO `ingsuite`.`metric`(`id`,`count`,`group_id`,`group_name`) VALUES(4,0,4,"Savings");
+
+
+
