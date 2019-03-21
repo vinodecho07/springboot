@@ -27,15 +27,21 @@ public class MetricController {
 	@Autowired
 	MetricService metricService;
 
-
-	
+	/**
+	 * API to update count based on the selection
+	 * @param id
+	 * @return
+	 */
 	@PostMapping("/updateCount/{id}")
-	public ResponseEntity<Metric> register(@PathVariable long id){
-		logger.info("id : " + id);
+	public ResponseEntity<Metric> counterUpdate(@PathVariable long id){
+		
 		return new ResponseEntity<Metric>(metricService.updateCount(id), HttpStatus.OK);
 	}
 	
-	
+	/**
+	 * API to retrieve the metrics details
+	 * @return metricList
+	 */
 	@GetMapping("/getMetrics")
 	public List<Metric> getMetricCount() {
 		List<Metric> metricList = metricService.getMetrics();
