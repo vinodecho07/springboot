@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.product</groupId>
 	<artifactId>INGSuite</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>INGSuite</name>
 	<description>ING Suite of Products </description>
 
@@ -65,17 +65,11 @@
 		</dependency>
 	</dependencies>
 	<distributionManagement>
-		<repository>
-			<id>nexus</id>
-			<name>ING_Suite</name>
-			<url>http://13.233.244.181:8081/repository/ING-SUITE/</url>
-		</repository>
-		<snapshotRepository>
-			<id>nexus</id>
-			<name>ISmart-Snap</name>
-			<url>http://13.233.244.181:8081/repository/ING-SUITE-SNAPSHOT/</url>
-		</snapshotRepository>
-	</distributionManagement>
+  <snapshotRepository>
+    <id>snapshots</id>
+    <url>http://13.127.71.20:8081/nexus/content/repositories/snapshots</url>
+  </snapshotRepository>
+</distributionManagement>
 
 	<build>
 		<plugins>
