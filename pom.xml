@@ -67,7 +67,7 @@
 	<distributionManagement>
   <snapshotRepository>
     <id>nexus</id>
-    <url>http://13.233.130.1088:8081/nexus/content/repositories/INGSuite-UI/</url>
+    <url>http://35.154.25.173:8081/repository/ing/</url>
   </snapshotRepository>
 </distributionManagement>
 
